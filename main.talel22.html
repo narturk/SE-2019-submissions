@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+    <title>My Title</title>
+</head>
+
+<body>
+<script>
+    function func1(first, second) {
+        var res = [];
+        if(Array.isArray(first) && Array.isArray(second)) {
+            for (var i=0 ; i<first.length ; i++) {
+                res.push(first[i]);
+            }
+            for (var j=0 ; j<second.length ; j++) {
+                res.push(first[j]);
+            }
+            return res;
+        }
+        if(typeof(first) == "object" || typeof(second) == "object") {
+            return Object.assign(first,second)
+        }
+        return undefined
+    }
+</script>
+</body>
+
+</html>
